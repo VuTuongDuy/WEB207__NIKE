@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link href="https://unpkg.com/tailwindcss@0.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <title>Product</title>
+</head>
+
+<body ng-app="myapp">
+    <div class="container-fluid">
+        <nav style="background: white; height: 40px;"
+            class="relative select-none bg-grey lg:flex lg:items-stretch w-full">
+            <div class="flex flex-no-shrink items-stretch h-12">
+                <img style="width: 25px; height: 35px; padding-top: 10px; margin-left: 30px;"
+                    src="image/bongchuyen1.png" alt="">
+            </div>
+            <div class="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
+                <div style="padding-right: 10px;" class="lg:flex lg:items-stretch lg:justify-end ml-auto">
+                    <a style="font-size: 11px; font-weight: bold;" href="gioithieu.html"
+                        class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-dark no-underline flex items-center">Introduce</a>
+                    <a style="font-size: 11px; font-weight: bold;" href="dangky.html"
+                        class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-dark no-underline flex items-center">Join
+                        Us</a>
+                    <a style="font-size: 11px; font-weight: bold;" href="dangnhap.html"
+                        class="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-dark no-underline flex items-center">Sign
+                        In</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid" style="margin-left: 20px; width: 1480px;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="image/Logo_NIKE.svg.png" alt="Bootstrap" width=90px height=15px
+                            style="padding-left: 40px;">
+                    </a>
+                </div>
+            </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
+                style="padding-left: 350px; font-weight: 600;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Nam</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 15px;">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Nữ</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 15px;">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Trẻ em</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 15px;">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Tùy chỉnh</a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 15px;">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-size: 18px;">Giảm giá</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li> -->
+                </ul>
+                <form class="d-flex" role="search" style="padding-right: 30px;">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm"
+                        style="border-radius: 20px;">
+                    <button class="btn btn-outline-success" type="submit" style="border-radius: 20px;">Search</button>
+                    <div class="">
+                        <a class="cart" href="#">
+                            <!-- <ul>
+                    <li class="cart"><i class="bx bx-basket"></i></li>
+                  </ul> -->
+                            <img src="image/icons8-shopping-bag-32.png" alt=""
+                                style="width: 55px; height: 35px; padding-left: 8px; padding-top: 5px;">
+                        </a>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <div id="mobile-filter">
+        <div class="border-bottom pb-2 ml-2">
+            <h4 id="burgundy">Filters</h4>
+        </div>
+        <div class="py-2 border-bottom ml-3">
+            <h6 class="font-weight-bold">Categories</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form>
+                <div class="form-group">
+                    <input type="checkbox" id="artisan">
+                    <label for="artisan">Fresh Artisan Breads</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="breakfast">
+                    <label for="breakfast">Breakfast Breads</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="healthy">
+                    <label for="healthy">Healthy Breads</label>
+                </div>
+            </form>
+        </div>
+        <div class="py-2 border-bottom ml-3">
+            <h6 class="font-weight-bold">Accompainments</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form>
+                <div class="form-group">
+                    <input type="checkbox" id="tea">
+                    <label for="tea">Tea Cakes</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="cookies">
+                    <label for="cookies">Cookies</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="pastries">
+                    <label for="pastries">Pastries</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="dough">
+                    <label for="dough">Cookie Dough</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="choco">
+                    <label for="choco">Chocolates</label>
+                </div>
+            </form>
+        </div>
+        <div class="py-2 ml-3">
+            <h6 class="font-weight-bold">Top Offers</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form>
+                <div class="form-group">
+                    <input type="checkbox" id="25off">
+                    <label for="25">25% off</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">5% off on</label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Sidebar filter section -->
+
+    <section id="sidebar" style="float: left;">
+        <div class="border-bottom pb-2 ml-2">
+            <h4 id="burgundy">Bộ lọc</h4>
+        </div>
+        <div class="py-2 border-bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Giới tính</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="form-group">
+                    <input type="checkbox" id="artisan">
+                    <label for="artisan">Nam</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="breakfast">
+                    <label for="breakfast">Nữ</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="healthy">
+                    <label for="healthy">Unisex</label>
+                </div>
+            </form>
+        </div>
+        <div class="py-2 border-bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Kids</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="form-group">
+                    <input type="checkbox" id="tea">
+                    <label for="tea">Boys</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="cookies">
+                    <label for="cookies">Girls</label>
+                </div>
+            </form>
+        </div>
+        <div class="py-2 ml-3 bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Khoảng giá</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="form-group">
+                    <input type="checkbox" id="25off">
+                    <label for="25">Dưới 1.000.000đ</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">1.001.00đ-2.700.000</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">2.701.000-3.999.000</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Trên 4.000.000đ</label>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="py-2 ml-3 bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Brand</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="form-group">
+                    <input type="checkbox" id="25off">
+                    <label for="25">Nike Sportswear</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Jordan</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Nike by you</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">ACG</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Nike Pro</label>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="py-2 ml-3 bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Sports</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="form-group">
+                    <input type="checkbox" id="25off">
+                    <label for="25">Lifestyle</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Running</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Training & Gym</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Basketball</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Football</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Yoga</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Golf</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Tenis</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Football</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="5off">
+                    <label for="5off" id="off">Dance</label>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="py-2 ml-3 bottom ml-3" style="margin-top: 25px;">
+            <h6 class="font-weight-bold">Màu sắc</h6>
+            <div id="orange"><span class="fa fa-minus"></span></div>
+            <form style="padding-top: 10px;">
+                <div class="" style="float: left;">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: rgb(205, 9, 9); border-radius: 50%;">
+                    <p style="font-size: 11px; padding-left: 5px;">Đỏ</p>
+                </div>
+                <div class="" style="float: left; padding-left: 10px;">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: black; border-radius: 50%;">
+                    <p style="font-size: 11px; padding-left: 5px;">Đen</p>
+                </div>
+                <div class="" style="float: left; padding-left: 10px;">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: orange; border-radius: 50%;">
+                    <p style="font-size: 11px; padding-left: 5px;">Vàng</p>
+                </div>
+                <div class="" style="float: left; padding-left: 10px;">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: violet; border-radius: 50%;">
+                    <p style="font-size: 11px; padding-left: 5px;">Tím</p>
+                </div>
+                <br>
+                <div class="" style="float: right; padding-top: 15px; padding-right: 73px;">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: green; border-radius: 50%;">
+                    <p style="font-size: 11px; padding-left: 5px;">Xanh</p>
+                </div>
+                <div class="" style="float: right; padding-right: 7px; padding-top: 15px">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: white; border-radius: 50%; border: 1px solid rgb(120, 117, 117);">
+                    <p style="font-size: 11px; padding-left: 5px;">Trắng</p>
+                </div>
+                <div class="" style="float: right; padding-right: 8px; padding-top: 15px">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: rgb(255, 85, 23); border-radius: 50%; border: 1px solid rgb(120, 117, 117);">
+                    <p style="font-size: 11px; padding-left: 5px;">Cam</p>
+                </div>
+                <div class="" style="float: right; padding-right: 10px; padding-top: 15px">
+                    <input type="button"
+                        style="width: 25px; height: 25px; background-color: brown; border-radius: 50%; border: 1px solid rgb(120, 117, 117);">
+                    <p style="font-size: 11px; padding-left: 5px;">Nâu</p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- products section -->
+    <section id="products" style="float: right;">
+        <div class="container mt-4 d-flex justify-content-center" style="padding-top: 15px;">
+            <div class="row g-0" ng-controller="sanphamController">
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;" ng-repeat="sp in listsp">
+                    <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                            <a href="detailsanpham.html"><img src="{{sp.image}}" alt="Generic placeholder thumbnail" style="width: 100%;"></a>
+                            <h5 style="padding-top: 5px;">{{sp.name}}</h5>
+                            <p class="line1">{{sp.mota}}</p>
+                            <p style="font-size: 13px;">{{sp.giaban}}</p>
+                        </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                <!-- <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" second bg-white p-4 text-center">
+                            <a href="detailsanpham.html"><img src="image/anh11.png" alt="Generic placeholder thumbnail" style="width: 100%;"></a>
+                            <h5>Nike SuperRep Cycle 2 Next</h5>
+                            <p class="line2">Indoor Cycling Shoes</p>
+                            <p style="font-size: 13px;">3,519,000</p>
+                        </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" third bg-white p-4 text-center">
+                            <img src="image/anhgiay10.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Air Force 1 '07 Premium</h5>
+                            <p class="line3">WMen's Shoes</p>
+                            <p style="font-size: 13px;">3,519,000₫</p>
+                        </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 d-flex justify-content-center" style="padding-top: 15px;">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                            <img src="image/anhgiay1.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Air Jordan 1 Elevate Low</h5>
+                            <p class="line1">Women's Shoes</p>
+                            <p style="font-size: 13px;">1.999.000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" second bg-white p-4 text-center">
+                            <img src="image/anhgiay2.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Blazer Mid '77 Premium</h5>
+                            <p class="line2">Men's Shoes</p>
+                            <p style="font-size: 13px;">4.400.000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" third bg-white p-4 text-center">
+                            <img src="image/anhgiay3.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Air Force 1 '07 Premium</h5>
+                            <p class="line3">WMen's Shoes</p>
+                            <p style="font-size: 13px;">3,519,000₫</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 d-flex justify-content-center" style="padding-top: 15px;">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                            <img src="image/anh12.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Metcon 8</h5>
+                            <p class="line1">Men's Training Shoes</p>
+                            <p style="font-size: 13px;">3,829,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" second bg-white p-4 text-center">
+                            <img src="image/anh13.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Air Zoom Terra Kiger 8</h5>
+                            <p class="line2">Women's Trail Running Shoes</p>
+                            <p style="font-size: 13px;">4,109,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" third bg-white p-4 text-center">
+                            <img src="image/anh14.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike ZoomX Zegama</h5>
+                            <p class="line3">Women's Trail-Running Shoes</p>
+                            <p style="font-size: 13px;">4,409,000₫</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 d-flex justify-content-center" style="padding-top: 15px;">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                            <img src="image/anh15.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Air Zoom Arcadia 2</h5>
+                            <p class="line1">Younger Kids' Shoes</p>
+                            <p style="font-size: 13px;">1,789,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" second bg-white p-4 text-center">
+                            <img src="image/anh16.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Storm-FIT AeroBill L91</h5>
+                            <p class="line2">Fitness Cap</p>
+                            <p style="font-size: 13px;">819,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" third bg-white p-4 text-center">
+                            <img src="image/anh17.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Brasilia 9.5</h5>
+                            <p class="line3">Training Backpack (Medium, 24L)</p>
+                            <p style="font-size: 13px;">1,199,000₫</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4 d-flex justify-content-center" style="padding-top: 15px;">
+            <div class="row g-0">
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                            <img src="image/anh21.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike SuperRep Go 3 Flyknit Next</h5>
+                            <p class="line1">Women's Training Shoes</p>
+                            <p style="font-size: 13px;">2,929,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" second bg-white p-4 text-center">
+                            <img src="image/anh19.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Flex Runner 2 Lil</h5>
+                            <p class="line2">Baby/Toddler Shoes</p>
+                            <p style="font-size: 13px;">1,149,000đ</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4" style="padding-top: 5px;">
+                    <div class="cards">
+                        <div class=" third bg-white p-4 text-center">
+                            <img src="image/anh20.png" alt="Generic placeholder thumbnail" style="width: 100%;">
+                            <h5>Nike Zoom Superfly Elite 2</h5>
+                            <p class="line3">Athletics Sprinting Spikes</p>
+                            <p style="font-size: 13px;">4,409,000₫</p>
+                            </ul> <button class="btnok">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div>
+        </div>
+    </section> -->
+    <div class="cart-field">
+
+    </div>
+    <script>
+        function sanphamFunc($scope) {
+            var listSP = [
+                {
+                    image:"image/anh11.png",
+                    name: "Nike SuperRep Cycle 2 Next",
+                    mota: "Indoor Cycling Shoes",
+                    giaban: "3,519,000đ"
+                },
+                {
+                    image:"image/anhgiay10.png",
+                    name: "Nike Air Force 1 '07 Premium",
+                    mota: "WMen's Shoes",
+                    giaban: "3,519,000₫",
+                },
+                {
+                    image:"image/anh13.png",
+                    name: "Nike Metcon 8 AMP",
+                    mota: "Men's Training Shoes",
+                    giaban: "4,109,000đ",
+                },
+                {
+                    image:"image/anh30.png",
+                    name: "Nike Air Max Alpha Trainer 5",
+                    mota: "Men's Training Shoes",
+                    giaban: "2,499,000đ",
+                },
+                {
+                    image:"image/anh12.png",
+                    name: "Nike Metcon 8",
+                    mota: "Men's Training Shoes",
+                    giaban: "3,829,000đ",
+                },
+                {
+                    image:"image/anh13.png",
+                    name: "Nike Air Zoom Terra Kiger 8",
+                    mota: "Women's Trail Running Shoes",
+                    giaban: "4,109,000đ",
+                },
+                {
+                    image:"image/anh14.png",
+                    name: "Nike ZoomX Zegama",
+                    mota: "Women's Trail-Running Shoes",
+                    giaban: "4,409,000đ",
+                },
+                {
+                    image:"image/anh15.png",
+                    name: "Nike Air Zoom Arcadia",
+                    mota: "Younger Kids' Shoes",
+                    giaban: "1,789,000đ",
+                },
+                {
+                    image:"image/anh16.png",
+                    name: "Nike Storm-FIT AeroBill L91",
+                    mota: "Fitness Cap",
+                    giaban: "819,000đ",
+                },
+                {
+                    image:"image/anh17.png",
+                    name: "Nike Brasilia 9.5",
+                    mota: "Training Backpack (Medium, 24L)",
+                    giaban: "1,199,000đ",
+                },
+                {
+                    image:"image/anh21.png",
+                    name: "Nike SuperRep Go 3 Flyknit Next",
+                    mota: "Women's Trail Running Shoes",
+                    giaban: "2,499,000đ",
+                },
+                {
+                    image:"image/anh20.png",
+                    name: "Nike Zoom Superfly Elite 2",
+                    mota: "Athletics Sprinting Spikes",
+                    giaban: "4,409,000đ",
+                },
+            ];
+            $scope.listsp = listSP;
+        }
+        var app = angular.module("myapp", []);
+        app.controller("sanphamController", sanphamFunc); 
+    </script>
+    <footer class="footer" style="margin-top: 200px;">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); color: white;">
+          © 2022
+          <a class="text-white" href="https://mdbootstrap.com/" style="text-decoration: none;">Nike, Inc. All Rights Reserved - PH24890</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    <!-- <footer class="footer">My footer</footer> -->
+</body>
+</html>
+<script src="js/sanpham.js"></script>
